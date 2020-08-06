@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/sangrimlee/go-scrapper/banking"
+)
 
 func main() {
-	fmt.Printf("hello, world\n")
+	account := banking.NewAccount("Sang Rim Lee")
+	account.Deposit(10000)
+	fmt.Println(account.Owner(), account.Balance())
 }
